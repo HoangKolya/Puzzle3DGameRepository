@@ -30,11 +30,11 @@ public class Player : MonoBehaviour
 
     public void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.R))
+        if(Input.touchCount == 2)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.touchCount == 3)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
