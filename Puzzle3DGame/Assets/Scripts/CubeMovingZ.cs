@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static SwipeDetection;
 
-public class Cube : MonoBehaviour
+public class CubeMovingZ : MonoBehaviour
 {
     [SerializeField] Vector3 moveDirection;
     Rigidbody rb;
@@ -16,13 +16,12 @@ public class Cube : MonoBehaviour
     }
     private void OnSwipe(Vector2 direction)
     {
-        //Vector3 dir =
-        //direction == Vector2.up ?
-        //Vector3.right : direction == Vector2.down ?
-        //Vector3.left : Vector3.zero;
+        Vector3 dir =
+        direction == Vector2.up ?
+        Vector3.back : direction == Vector2.down ?
+        Vector3.forward : Vector3.zero;
 
-        if (direction == Vector2.right || direction == Vector2.left)
-            MoveCube(direction == Vector2.right ? Vector2.left : Vector2.right);
+        MoveCube(dir);
     }
 
     private void MoveCube(Vector3 direction)

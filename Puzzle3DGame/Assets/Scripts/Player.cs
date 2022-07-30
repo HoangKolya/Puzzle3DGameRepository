@@ -8,12 +8,13 @@ using static SwipeDetection;
 public class Player : MonoBehaviour
 {
     [SerializeField] Vector3 moveDirection;
+    [SerializeField] float speed;
     Rigidbody rb;
-
+    
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+     
         OnSwipeEvent += OnSwipe;
     }
 
@@ -22,14 +23,13 @@ public class Player : MonoBehaviour
         Vector3 dir =
         direction == Vector2.up ?
         Vector3.back : direction == Vector2.down ?
-        Vector3.forward: (Vector3)direction;
+        Vector3.forward: Vector3.zero;
 
         Move(dir);
     }
 
     public void FixedUpdate()
     {
-        
         if(Input.GetKey(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -43,7 +43,27 @@ public class Player : MonoBehaviour
     private void Move(Vector3 direction)
     {
         if(rb != null)
-            rb.AddRelativeForce(direction * 1200);
+            rb.AddRelativeForce(direction * speed);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "CubeTrigger")
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotationZ 
+                | RigidbodyConstraints.FreezeRotationX 
+                | RigidbodyConstraints.FreezeRotationY;
+            
+        }
+        else
+        {
+
+            rb.constraints = RigidbodyConstraints.FreezeRotationZ
+                | RigidbodyConstraints.FreezeRotationX 
+                | RigidbodyConstraints.FreezeRotationY
+                | RigidbodyConstraints.FreezePositionX;
+        }
+            
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,5 +72,6 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        
     }
 }
