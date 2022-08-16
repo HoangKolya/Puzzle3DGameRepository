@@ -493,7 +493,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 393199716}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
