@@ -14,13 +14,13 @@ public class StartMenu : MonoBehaviour
     {
         animator.SetBool("isPlay", true);
 
-        Invoke("NextLvl", 0.5f);
+        Invoke("NextLvl", 0.6f);
     }
 
     public void Quit()
     {
         animator.SetBool("isQuit", true);
-        Invoke("Application.Quit", 0.5f);
+        Invoke("Application.Quit", 0.6f);
         
     }
 
