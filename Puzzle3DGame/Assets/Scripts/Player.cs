@@ -5,12 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static SwipeDetection;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IMoveObject
 {
     [SerializeField] Vector3 moveDirection;
-    [SerializeField] float speed;
     Rigidbody rb;
-    
+
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -38,16 +37,34 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-    }
 
-    private void Move(Vector3 direction)
+    }
+    public void Move(Vector3 direction)
     {
-        if(rb != null)
-            rb.AddRelativeForce(direction * speed);
+        if (rb != null)
+            rb.AddRelativeForce(direction * 1200);
+    }
+    public void FreezeBouncing()
+    {
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+        rb.constraints = RigidbodyConstraints.FreezeRotationZ
+                | RigidbodyConstraints.FreezeRotationX
+                | RigidbodyConstraints.FreezeRotationY
+                | RigidbodyConstraints.FreezePositionX;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.collider.tag == this.tag)
+        {
+            Rigidbody collidedObject = collision.gameObject.GetComponent<Rigidbody>();
+            if (collidedObject.velocity == Vector3.zero)
+            {
+                FreezeBouncing();
+            }
+            collidedObject = null;
+        }
+
         if (collision.collider.tag == "CubeTrigger")
         {
             rb.constraints = RigidbodyConstraints.FreezeRotationZ 
@@ -65,7 +82,6 @@ public class Player : MonoBehaviour
         }
             
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if(this.CompareTag("Player") && other.CompareTag("Finish"))
@@ -73,4 +89,10 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+}
+
+public interface IMoveObject
+{
+    void Move(Vector3 direction);
+    void FreezeBouncing();
 }
