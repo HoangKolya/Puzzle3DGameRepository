@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class StartMenu : MonoBehaviour
 {
+    Action action;
     Animator animator;
     private void Start()
     {
@@ -12,20 +14,27 @@ public class StartMenu : MonoBehaviour
     }
     public void Play()
     {
+        action = () => NextLvl();
         animator.SetBool("isPlay", true);
-
-        Invoke("NextLvl", 0.6f);
+        StartCoroutine(ButtonInStartMenu(action));
     }
 
-    public void Quit()
+    public void QuitInStartMenu()
     {
+        action = () => Application.Quit();
         animator.SetBool("isQuit", true);
-        Invoke("Application.Quit", 0.6f);
-        
+        StartCoroutine(ButtonInStartMenu(action));
     }
 
     public void NextLvl()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    IEnumerator ButtonInStartMenu(Action action)
+    {
+        yield return new WaitForSeconds(0.5f);
+        action();
+        Debug.Log("ok");
     }
 }

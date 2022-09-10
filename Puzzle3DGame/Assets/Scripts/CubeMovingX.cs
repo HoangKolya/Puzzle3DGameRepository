@@ -27,7 +27,7 @@ public class CubeMovingX : MonoBehaviour, IMoveObject
     public void Move(Vector3 direction)
     {
         if (rb != null)
-            rb.AddRelativeForce(direction * 1300);
+            rb.AddRelativeForce(direction * 1100);
     }
 
     public void FreezeBouncing()
@@ -46,7 +46,7 @@ public class CubeMovingX : MonoBehaviour, IMoveObject
             Rigidbody collidedObject = collision.gameObject.GetComponent<Rigidbody>();
             if (collidedObject.velocity == Vector3.zero)
             {
-                FreezeBouncing();
+                FreezeBouncing();;
             }
             collidedObject = null;
         }

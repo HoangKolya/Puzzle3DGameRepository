@@ -222,7 +222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3513581491246380843, guid: 2e6a12dbde505264dbcd19dbb99377ca, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3513581491246380843, guid: 2e6a12dbde505264dbcd19dbb99377ca, type: 3}
       propertyPath: m_AnchorMax.x
@@ -315,7 +315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5668206380803226244, guid: d7e506c6e80738b45baeaa3e410648e9, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5668206380803226244, guid: d7e506c6e80738b45baeaa3e410648e9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -470,10 +470,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.8638305, b: 0.8638305, a: 0.72156864}
+  m_Color: {r: 0.8666667, g: 0.8627451, b: 0.8627451, a: 0.7294118}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -846,8 +846,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 743884030}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Quit
+        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
+        m_MethodName: QuitInStartMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1058,7 +1058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1083,6 +1083,18 @@ PrefabInstance:
     - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
       propertyPath: m_SizeDelta.y
       value: 309.4019
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1114,11 +1126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -617.07153
+      value: -617.0715
       objectReference: {fileID: 0}
     - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 247.22502
+      value: 247.22498
       objectReference: {fileID: 0}
     - target: {fileID: 2600094854630014634, guid: dc0254d05c43ee44791cc76c7dfa85be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1192,7 +1204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6503136345052159526, guid: 5c807ff1b88ed494aa8f2f18322b9834, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6503136345052159526, guid: 5c807ff1b88ed494aa8f2f18322b9834, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1309,7 +1321,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 1, b: 0.8194444, a: 0}
+  m_BackGroundColor: {r: 0, g: 1, b: 0.81960785, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1422,7 +1434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 438210343958180555, guid: 671a07c77a4d9ff47a63d876b6c69656, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 438210343958180555, guid: 671a07c77a4d9ff47a63d876b6c69656, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1519,7 +1531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8924034668886822193, guid: 07a43a1adc828174c9e87b706fc036ac, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8924034668886822193, guid: 07a43a1adc828174c9e87b706fc036ac, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1640,7 +1652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4429712072676720871, guid: 350b0f3e7cb567e41aa4a9bced3ed8a5, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4429712072676720871, guid: 350b0f3e7cb567e41aa4a9bced3ed8a5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1896,7 +1908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7874472752388657681, guid: 43ed97bf61e9ea140be0fe6c7e116d3d, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7874472752388657681, guid: 43ed97bf61e9ea140be0fe6c7e116d3d, type: 3}
       propertyPath: m_AnchorMax.x
