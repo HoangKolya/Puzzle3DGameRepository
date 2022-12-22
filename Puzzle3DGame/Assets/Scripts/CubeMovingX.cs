@@ -27,7 +27,7 @@ public class CubeMovingX : MonoBehaviour, IMoveObject
     public void Move(Vector3 direction)
     {
         if (rb != null)
-            rb.AddRelativeForce(direction * 1100);
+            rb.AddRelativeForce(direction * 1200);
     }
 
     public void FreezeBouncing()

@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Collections;
+using UnityEngine;
 using System;
 
 public class StartMenu : MonoBehaviour
@@ -12,10 +13,11 @@ public class StartMenu : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-    public void Play()
+    public void PlayInStartMenu()
     {
+        animator.SetBool("IsPlayButtonInStartMenuClicked", true);
         action = () => NextLvl();
-        animator.SetBool("isPlay", true);
+        
         StartCoroutine(ButtonInStartMenu(action));
     }
 

@@ -257,7 +257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LVL 3
+  m_Text: LVL 2
 --- !u!222 &608408807
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6850788134287189623, guid: 7e47c9d9c5add53438c383de0802054f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.37
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 6850788134287189623, guid: 7e47c9d9c5add53438c383de0802054f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1061,7 +1061,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0, z: 1}
-  speed: 1200
 --- !u!54 &1224177259
 Rigidbody:
   m_ObjectHideFlags: 0

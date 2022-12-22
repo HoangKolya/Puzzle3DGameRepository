@@ -20,7 +20,6 @@ public class PauseMenu : MonoBehaviour
     public void QuitInPauseMenu()
     {
         Application.Quit();
-        Debug.Log("o");
     }
     public void PauseMenuClose()
     {
